@@ -1,4 +1,4 @@
-# Day01
+# Angular 01
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
