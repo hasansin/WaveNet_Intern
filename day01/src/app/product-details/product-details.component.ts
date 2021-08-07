@@ -12,5 +12,10 @@ export class ProductDetailsComponent implements OnInit {
   product: Product | undefined;
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    const routeParams = this.route.snapshot.paramMap;
+    const IdFromRoute = Number(routeParams.get('Id'));
+
+    this.product = products.find((product) => product.id === IdFromRoute);
+  }
 }
