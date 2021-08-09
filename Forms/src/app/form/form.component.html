@@ -1,1 +1,16 @@
-<p>form works!</p>
+<div title="title"><h1>Form</h1></div>
+<div class="form">
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name :</mat-label>
+      <input
+        matInput
+        placeholder="Nanduni"
+        id="name"
+        type="text"
+        [formControl]="name"
+      />
+    </mat-form-field>
+    <p>Value: {{ name.value }}</p>
+  </form>
+</div>

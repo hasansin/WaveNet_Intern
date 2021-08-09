@@ -1,0 +1,25 @@
+.example-form {
+  min-width: 250px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.title {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}
