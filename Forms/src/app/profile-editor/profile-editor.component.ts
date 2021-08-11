@@ -11,6 +11,12 @@ export class ProfileEditorComponent implements OnInit {
   profileEditor = new FormGroup({
     firstname: new FormControl(' '),
     lasrname: new FormControl(' '),
+    Address: new FormGroup({
+      street: new FormControl(' '),
+      city: new FormControl(' '),
+      state: new FormControl(' '),
+      zip: new FormControl(' '),
+    }),
   });
 
   ngOnInit(): void {}
