@@ -35,6 +35,28 @@
         <input matInput id="zip" type="text" formControlName="zip" />
       </mat-form-field>
     </div>
+    <div formArrayName="aliases">
+      <h2>Aliases</h2>
+      <button
+        mat-raised-button
+        color="primary"
+        style="margin-bottom: 50px"
+        (click)="addAlias()"
+      >
+        + Another Alias
+      </button>
+      <div *ngFor="let alias of aliases.controls; let i = index">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Alias: </mat-label>
+          <input
+            matInput
+            id="alias-{{ i }}"
+            type="text"
+            [formControlName]="i"
+          />
+        </mat-form-field>
+      </div>
+    </div>
 
     <p>Complete the form to enable button</p>
     <p>Form Status: {{ profileEditor.value }}</p>

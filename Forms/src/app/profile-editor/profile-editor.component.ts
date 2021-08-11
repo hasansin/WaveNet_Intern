@@ -4,6 +4,7 @@ import {
   FormControl,
   Validators,
   FormBuilder,
+  FormArray,
 } from '@angular/forms';
 
 @Component({
@@ -22,6 +23,7 @@ export class ProfileEditorComponent implements OnInit {
       state: [''],
       zip: [''],
     }),
+    aliases: this.fb.array([this.fb.control('')]),
   });
 
   ngOnInit(): void {}
@@ -37,5 +39,13 @@ export class ProfileEditorComponent implements OnInit {
         street: 'Colombo',
       },
     });
+  }
+
+  get aliases() {
+    return this.profileEditor.get('aliases') as FormArray;
+  }
+
+  addAlias() {
+    this.aliases.push(this.fb.control(''));
   }
 }
