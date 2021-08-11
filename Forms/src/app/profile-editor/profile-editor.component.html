@@ -36,7 +36,9 @@
       </mat-form-field>
     </div>
 
-    <p>To Complete the form</p>
+    <p>Complete the form to enable button</p>
+    <p>Form Status: {{ profileEditor.value }}</p>
+    <p>Form Status: {{ profileEditor.status }}</p>
     <button
       mat-raised-button
       color="primary"
@@ -44,6 +46,14 @@
       [disabled]="!profileEditor"
     >
       Submit
+    </button>
+    <button
+      style="margin-left: 20px"
+      mat-raised-button
+      color="primary"
+      (click)="updateProfile()"
+    >
+      updateProfile
     </button>
   </form>
 </div>
