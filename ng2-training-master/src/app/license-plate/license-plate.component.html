@@ -1,4 +1,4 @@
-<h2>{{ plate.title }}</h2>
+<h2>{{ plate.title | uppercase | lowercase }}</h2>
 <img src="assets/sale.png" *ngIf="plate.onSale" alt="" />
 <img [src]="plate.picture" class="img-fluid" />
 <p>{{ plate.description }}</p>
