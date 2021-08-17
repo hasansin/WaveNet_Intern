@@ -4,7 +4,7 @@
 <p>{{ plate.description }}</p>
 <div>
   <h2 class="float-left">
-    {{ plate.price | currency: "USD":"symbol":"1.0-2" }}
+    {{ plate.price | currencyRenderer: "LKR":1 }}
   </h2>
   <button
     (click)="buttonClicked()"

@@ -26,13 +26,14 @@ import {CartViewComponent} from './cart-view/cart-view.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HighlightDirective } from './highlight.directive';
+import { CurrencyRendererPipe } from './currency-renderer.pipe';
 
 @NgModule({
   declarations: [
     AppComponent, HelloComponent, LicensePlateComponent,
     LoginComponent, PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent, CarouselComponent, CurrencySwitcherComponent,
-    CheckoutFormComponent, CheckoutViewComponent, CartViewComponent, JumbotronComponent, NavigationComponent, HighlightDirective
+    CheckoutFormComponent, CheckoutViewComponent, CartViewComponent, JumbotronComponent, NavigationComponent, HighlightDirective, CurrencyRendererPipe
   ],
   imports: [
     BrowserModule,
