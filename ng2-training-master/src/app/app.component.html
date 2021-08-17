@@ -9,9 +9,11 @@
   <div class="container">
     <div class="row">
       <app-license-plate
+        *ngFor="let plate of licensePlates; even as isEven"
         class="col-md-4"
-        [plate]="licensePlate"
+        [plate]="plate"
         buttonText="Add to cart"
+        [class.highlight]="isEven"
       ></app-license-plate>
       <!-- License plates go here -->
     </div>
