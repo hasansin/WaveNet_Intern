@@ -1,5 +1,7 @@
 Type at least 4 characters:
 <input type="text" [(ngModel)]="value" />
-<p style="color: red;" *ngIf="value?.length < 4">
+<p style="color: red" *ngIf="value?.length < 4; else valid">
   The input value is not long enough
 </p>
+
+<ng-template #valid> Your input is valid!! </ng-template>
