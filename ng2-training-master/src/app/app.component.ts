@@ -7,6 +7,7 @@ import { CALIFORNIA_PLATE, LICENSE_PLATES } from "./mock-data";
   templateUrl: "./app.component.html",
 })
 export class AppComponent {
+  date = new Date();
   licensePlates: LicensePlate[] = LICENSE_PLATES;
   licensePlate: LicensePlate = CALIFORNIA_PLATE;
 }
