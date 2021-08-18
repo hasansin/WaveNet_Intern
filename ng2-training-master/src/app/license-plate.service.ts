@@ -1,5 +1,5 @@
+import { HttpClient } from "@angular/common/http";
 import { Observable, of } from "rxjs/index";
-import { LICENSE_PLATES } from "./mock-data";
 import { Injectable } from "@angular/core";
 import { LicensePlate } from "./license-plate";
 
@@ -7,9 +7,10 @@ import { LicensePlate } from "./license-plate";
   providedIn: "root",
 })
 export class LicensePlateService {
-  constructor() {}
+  baseURL = "http://localhost:8000/data";
+  constructor(private http: HttpClient) {}
 
   getList(): Observable<LicensePlate[]> {
-    return of(LICENSE_PLATES);
+    return this.http.get<LicensePlate[]>(this.baseURL);
   }
 }

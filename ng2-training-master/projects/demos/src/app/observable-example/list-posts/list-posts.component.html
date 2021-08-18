@@ -1,15 +1,15 @@
 <h2>Latest posts from our favorite social media:</h2>
+<button (click)="Unsubscribe()">Unsubscribe</button>
 <div>
   <div class="post" *ngFor="let post of posts">
-    <strong>From:</strong> {{post.name | titlecase}} ({{post.email}})
-    <br> <br>
+    <strong>From:</strong> {{ post.name | titlecase }} ({{ post.email }}) <br />
+    <br />
     <strong>Message:</strong>
-    <br>
-    {{post.body}}
+    <br />
+    {{ post.body }}
   </div>
 
-
   <div class="post" *ngFor="let email of emails">
-    {{email}}
+    {{ email }}
   </div>
 </div>

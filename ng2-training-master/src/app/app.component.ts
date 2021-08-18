@@ -1,7 +1,7 @@
 import { LicensePlateService } from "./license-plate.service";
 import { Component } from "@angular/core";
 import { LicensePlate } from "./license-plate";
-import { CALIFORNIA_PLATE, LICENSE_PLATES } from "./mock-data";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-root",
@@ -9,8 +9,16 @@ import { CALIFORNIA_PLATE, LICENSE_PLATES } from "./mock-data";
 })
 export class AppComponent {
   licensePlates: LicensePlate[];
-  constructor(service: LicensePlateService) {
-    service.getList().subscribe((data) => (this.licensePlates = data));
-  }
+  subscription: Subscription;
   date = new Date();
+
+  constructor(service: LicensePlateService) {
+    this.subscription = service
+      .getList()
+      .subscribe((data) => (this.licensePlates = data));
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }
