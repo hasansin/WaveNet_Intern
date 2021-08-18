@@ -1,3 +1,4 @@
+import { Observable, of } from "rxjs/index";
 import { LICENSE_PLATES } from "./mock-data";
 import { Injectable } from "@angular/core";
 import { LicensePlate } from "./license-plate";
@@ -8,7 +9,7 @@ import { LicensePlate } from "./license-plate";
 export class LicensePlateService {
   constructor() {}
 
-  getList(): LicensePlate[] {
-    return LICENSE_PLATES;
+  getList(): Observable<LicensePlate[]> {
+    return of(LICENSE_PLATES);
   }
 }

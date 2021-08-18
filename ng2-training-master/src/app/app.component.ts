@@ -8,10 +8,9 @@ import { CALIFORNIA_PLATE, LICENSE_PLATES } from "./mock-data";
   templateUrl: "./app.component.html",
 })
 export class AppComponent {
+  licensePlates: LicensePlate[];
   constructor(service: LicensePlateService) {
-    this.licensePlates = service.getList();
+    service.getList().subscribe((data) => (this.licensePlates = data));
   }
   date = new Date();
-  licensePlates: LicensePlate[] = LICENSE_PLATES;
-  licensePlate: LicensePlate = CALIFORNIA_PLATE;
 }
