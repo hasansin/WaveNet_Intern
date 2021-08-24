@@ -11,10 +11,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
-import { FComponent } from './f/f.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, ProfileEditorComponent, FComponent],
+  declarations: [AppComponent, FormComponent, ProfileEditorComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

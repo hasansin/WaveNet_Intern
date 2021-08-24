@@ -1,3 +1,4 @@
+import { Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
@@ -7,7 +8,11 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-  name = new FormControl(' ');
+  name = new FormControl(' ', [
+    Validators.required,
+    Validators.maxLength(10),
+    Validators.pattern("^[a-zA-Z -']+"),
+  ]);
   constructor() {}
 
   ngOnInit(): void {}
